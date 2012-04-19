@@ -41,12 +41,16 @@ class TestSubredditAndUsernameAutolinking(SnudownTest):
         ]
 
         # Generate the test list using various prefixes and suffixes
+        prefix_and_suffix_list = (
+            ('',''),('abc',' def'),('abc ',' def'),
+            ('abc ',', def'), ('abc ',': def'), ('abc ','!'),
+        )
         for x in ok:
             xl = '<a href="' + x + '">' + x + '</a>'
-            for pre,suf in (('',''),('abc ',' def'),('abc',', def')):
+            for pre,suf in prefix_and_suffix_list:
                 self.testdata.append((pre+x+suf, '<p>'+pre+xl+suf+'</p>\n'))
         for x in notok:
-            for pre,suf in (('',''),('abc ',' def')):
+            for pre,suf in prefix_and_suffix_list:
                 self.testdata.append((pre+x+suf, '<p>'+pre+x+suf+'</p>\n'))
 
 if __name__ == '__main__':
