@@ -16,7 +16,7 @@ class TestSubredditAndUsernameAutolinking(SnudownTest):
         # These strings will be autolinked
         ok = [
             # Subreddits
-            '/r/abc', '/r/t:y', '/r/reddit.com', '/r/1984sweet1984',
+            '/r/ca', '/r/abc', '/r/t:y', '/r/reddit.com', '/r/1984sweet1984',
             '/r/fffffffuuuuuuuuuuuu01',
             '/r/funny+pics', '/r/reddit.com+funny+AskReddit',
             '/r/t:yesterday+t:tommorow', '/r/reddit.com+funny+t:tommorow',
@@ -28,7 +28,7 @@ class TestSubredditAndUsernameAutolinking(SnudownTest):
         notok = [
             # Subreddits
             '/r/', '/r/!',
-            '/r/a', '/r/ab', '/r/t', '/r/t', '/r/t:', '/r/a:', '/r/a:b',
+            '/r/a', '/r/t', '/r/t', '/r/t:', '/r/a:', '/r/a:b',
             '/r/a:bcd',
             '/r/reddit.comx',
             '/r/fffffffuuuuuuuuuuuu012',
