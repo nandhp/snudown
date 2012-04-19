@@ -21,6 +21,7 @@ class TestSubredditAndUsernameAutolinking(SnudownTest):
             '/r/funny+pics', '/r/reddit.com+funny+AskReddit',
             '/r/t:yesterday+t:tommorow', '/r/reddit.com+funny+t:tommorow',
             '/r/t:tommorow+funny+reddit.com',
+            '/r/t:now+ca+funny', '/r/funny+ca', '/r/ca+funny',
             # Usernames
             '/u/abc', '/u/_username'
         ]
@@ -34,6 +35,7 @@ class TestSubredditAndUsernameAutolinking(SnudownTest):
             '/r/fffffffuuuuuuuuuuuu012',
             '/r/funny+reddit.comx+abc', '/r/funny+r:ome',
             '/r/foo+', '/r/+foo', '/r/foo++bar',
+            '/r/t+ca', '/r/ca+t', '/r/t:+foo',
             # Usernames
             '/u/', '/u/!'
         ]
